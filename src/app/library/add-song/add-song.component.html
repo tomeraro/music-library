@@ -1,0 +1,53 @@
+<h1 mat-dialog-title *ngIf="dialogData.mode === 'add'">Add Song</h1>
+<h1 mat-dialog-title *ngIf="dialogData.mode === 'update'">Update Song</h1>
+
+<div *ngIf="songForm">
+    <form mat-dialog-content [formGroup]="songForm">
+        <div>
+          <mat-form-field class="form-field" appearance="outline">
+            <mat-label> Song name: </mat-label>
+            <input matInput formControlName="name" required>
+          </mat-form-field>
+        </div>
+    
+         <div>
+           <mat-form-field class="form-field" appearance="outline">
+            <mat-label> Artist: </mat-label>
+            <input matInput formControlName="artist" required>
+          </mat-form-field>
+        </div>
+    
+        <div>
+          <mat-form-field appearance="outline">
+            <mat-label> Genere: </mat-label>
+            <mat-select formControlName="genere">
+              <mat-option *ngFor="let option of genereOptions" [value]="option">{{option}}</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+    
+        <div>
+          <mat-form-field class="form-field" appearance="outline">
+              <mat-label> Cover url: </mat-label>
+              <input matInput formControlName="coverUrl" required>
+          </mat-form-field>  
+        </div>
+    
+        <div>
+            <mat-form-field appearance="outline">
+              <mat-label>Release date: </mat-label>
+              <input matInput [matDatepicker]="picker" formControlName="releaseDate">
+              <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+              <mat-datepicker #picker></mat-datepicker>
+            </mat-form-field>
+        </div>
+    </form>
+    
+    <div *ngIf="error" class="error">
+      {{error}}
+    </div>
+    <div mat-dialog-actions>
+      <button mat-button (click)="close()">Close</button>
+      <button mat-button [disabled]="!songForm.valid" (click)="saveSong()">Save</button>
+    </div>
+</div>

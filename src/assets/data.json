@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "name": "a sky full of stars",
+    "artist": "Coldplay",
+    "genere": "alternative",
+    "coverUrl": "https://www.youtube.com/watch?v=VPRjCeoBqrI",
+    "releaseDate": "2014-01-01T23:28:56.782Z"
+  },
+  {
+    "id": 2,
+    "name": "stairway to Heaven",
+    "artist": "Led Zeppelin",
+    "genere": "rock",
+    "coverUrl": "https://www.youtube.com/watch?v=QkF3oxziUI4",
+    "releaseDate": "1971-01-01T23:28:56.782Z"
+  },
+  {
+    "id": 3,
+    "name": "tudu bom",
+    "artist": "Static & Benel",
+    "genere": "pop",
+    "coverUrl": "https://www.youtube.com/watch?v=Y_OLslE3bX8",
+    "releaseDate": "2017-01-01T23:28:56.782Z"
+  },
+  {
+    "id": 4,
+    "name": "gabi & Debi",
+    "artist": "Hadag Nachash",
+    "genere": "hip-hop",
+    "coverUrl": "https://www.youtube.com/watch?v=aJ5NXQNOQ3s",
+    "releaseDate": "2000-01-01T23:28:56.782Z"
+  },
+  {
+    "id": 5,
+    "name": "the legend of the black shwarma",
+    "artist": "Infected mushroom",
+    "genere": "rock",
+    "coverUrl": "https://www.youtube.com/watch?v=Cty3jkKCD7I",
+    "releaseDate": "2002-01-01T23:28:56.782Z"
+  },
+  {
+    "id": 6,
+    "name": "Smells Like Teen Spirit",
+    "artist": "Nirvana",
+    "genere": "alternative",
+    "coverUrl": "https://www.youtube.com/watch?v=hTWKbfoikeg",
+    "releaseDate": "2002-01-01T23:28:56.782Z"
+  }
+]

@@ -1,0 +1,24 @@
+<div class="library-actions">
+  <button mat-raised-button color="primary" (click)="fetchSongs()">Fetch Songs</button>
+  <button mat-raised-button color="primary" (click)="addSong()">Add Song</button>
+</div>
+
+<div class="filter">
+  Filter by genere: 
+  <mat-checkbox *ngFor="let item of generes" [value]="item" (change)="filterChange($event, item)">{{item}}</mat-checkbox>
+</div>
+<div class="songs-container">
+  <mat-progress-bar *ngIf="showLoader; else showSongs" mode="indeterminate"></mat-progress-bar>
+
+  <ng-template #showSongs>
+      <div class="song" *ngFor="let song of songs$ | async">
+          <span class="bold">Song: </span>{{song.name | capitalize}} - <span class="bold">Artist: </span> {{song.artist}}
+    
+        <div class="actions">
+            <mat-icon (click)="playSong(song.coverUrl)">play_circle_outline</mat-icon>
+            <mat-icon (click)="updateSong(song.id, song)">edit</mat-icon>
+            <mat-icon (click)="deleteSong(song.id)">delete</mat-icon>    
+        </div>
+      </div>
+  </ng-template>
+</div>
